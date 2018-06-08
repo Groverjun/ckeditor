@@ -1,0 +1,66 @@
+ .MaskHover{
+  	position: relative;
+  }
+  .MaskBox{
+  	position: absolute;
+  	width: 100%;
+  	height: 100%;
+  	top: 0;
+  	left: 0;
+  	display: none;
+  	z-index: 99;
+  	background: rgba(0,0,0,.5);
+  	color: #fff;
+  	text-align: center;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  }
+  .MaskBox>p{
+  	font-size: 24px;
+  	color: #fff !important;
+  }
+  .MaskHover:hover .MaskBox{
+  	display: flex;
+  }
+  .filesBox{
+  	position: relative;
+  	overflow: hidden;
+  	top: 15px;
+  }
+ .filesBox .el-button [class*=el-icon-]+span{
+ 	margin: 0 0 0 5px !important;
+ 	
+ }
+  .filesBox>input{
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	z-index: 10;
+  	opacity: 0;
+  	display: inline-block;
+  	width: 89px;
+  	height: 40px;
+  }
+  .addNode{
+  	margin: 5px 0;
+  	padding: 5px 0;
+  }
+  a{text-decoration: none;}
+.txtLen{
+	padding: 0 5px;
+	background: rgba(238, 238, 238, 0.4);
+}
+.addNode{
+	text-align: center;
+	padding: 5px 0;
+}
+a{text-decoration: none !important;}
+.deleteAll{padding:5px !important;}
+.INputAll{
+	width: auto;
+	height: auto;
+	border: none;
+	display: inline;
+}
+.INputAll:focus{border: 1px dotted #1994FF;box-shadow: none;    outline-offset:0px;outline: none;}
