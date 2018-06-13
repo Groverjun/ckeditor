@@ -62,5 +62,6 @@ a{text-decoration: none !important;}
 	height: auto;
 	border: none;
 	display: inline;
+	background: none;
 }
 .INputAll:focus{border: 1px dotted #1994FF;box-shadow: none;    outline-offset:0px;outline: none;}
