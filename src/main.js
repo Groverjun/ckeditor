@@ -8,6 +8,7 @@ import'./assets/zh-cn.js'
 //css
 import'./assets/css/bootstrap/dist/css/bootstrap.min.css'
 import'./assets/css/index.css'
+
 //element
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'

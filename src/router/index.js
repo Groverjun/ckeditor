@@ -6,6 +6,7 @@ import module3 from '@/components/module3'
 import module4 from '@/components/module4'
 import module5 from '@/components/module5'
 import demo1 from '@/components/echarts/demo1'
+import select1 from '@/components/select/select1'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/demo1',
       name: 'demo1',
       component: demo1
+    },
+     {
+      path: '/select1',
+      name: 'select1',
+      component: select1
     }
   ]
 })
