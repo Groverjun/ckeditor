@@ -1,4 +1,4 @@
-{
+﻿啊啊啊{
 	title:"厂家直销",
 	bannerBg:"http://page-bucket.oiaqye7985.com/land-page/images/module15/bannerBg.jpg",
 	banner:"http://page-bucket.oiaqye7985.com/land-page/images/module15/banner.png",
