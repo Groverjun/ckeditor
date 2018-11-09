@@ -2,10 +2,13 @@
 	<div id="html-content">
 		<a href="javascript:void(0)" type="button" class="el-button el-button--primary" @click="ok">
 				<i class="el-icon-edit"></i><span>保存</span>
-			</a>
+		</a>
 		<div class="banner MaskHover"  v-for="(item,index) in data.banner">
 			<a href="javascript:void(0)" class="clickA" onclick="clickGXinRong(this);" data-type="co" data-keyword="关键字" data-local="A">
 				<img  v-bind:src="item" width="100%">
+			</a> 
+			<a href="javascript:void(0)" class="clickA" onclick="clickGXinRong(this);" data-type="co" data-keyword="关键字" data-local="A">
+				<img  v-bind:src="data.iso[index]" width="100%">
 			</a> 
 			<div class="MaskBox" v-if="delNode">
 				<p>上传文件的宽为1920px</p>
@@ -13,6 +16,10 @@
 					<a href="javascript:void(0)" type="button" class="el-button el-button--primary filesBox">
 						<i class="el-icon-upload"></i><span>上传</span>
 						<input type="file" @change="bannerFile($refs.bannerImg[index],index,1920)" ref="bannerImg"/>
+					</a>
+					<a href="javascript:void(0)" type="button" class="el-button el-button--primary filesBox">
+						<i class="el-icon-upload"></i><span>上传移动</span>
+						<input type="file" @change="MbannerFile($refs.MbannerImg[index],index,750)" ref="MbannerImg"/>
 					</a>
 					<a href="javascript:void(0)" type="button" class="el-button el-button--danger"@click="bannerDel(index)">
 						<i class="el-icon-delete"></i><span>删除</span>
@@ -295,7 +302,7 @@
 
 <script>
 import InlineEditor from '@ckeditor/ckeditor5-build-inline';
-var data='{"status":200,"msg":"OK","data":{"paramMob":{"steel":["http://page-bucket.oiaqye7985.com/img/i/abt2.jpg"],"product":[{"p":"镀锌带方管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list1.jpg"},{"p":"镀锌带圆管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list2.jpg"},{"p":"镀锌带方管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list3.jpg"},{"p":"钢管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list5.jpg"},{"p":"钢管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list5.jpg"},{"p":"钢管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list6.jpg"}],"iso":["http://page-bucket.oiaqye7985.com/img/i/abt1.jpg"],"successfulCases":[{"p":"大棚施工图","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"},{"p":"石油管道施工图","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"},{"p":"穿线施工图","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"},{"p":"防腐工程","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"},{"p":"钢管喷漆图","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"},{"p":"天然气管道施工图","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"}],"advantage":[{"p":"库存充足、保证货期","img":"http://page-bucket.oiaqye7985.com/img/i/b2_list1.jpg","h1":"强大的生产实力","li":["热镀锌带圆管、方管是主导产品，年产量达45万吨;","直缝焊管、热镀锌管、螺旋焊管等产品年销量达65万吨;","产品广泛应用于水暖、大棚、穿线、石油、天然气等;"]},{"p":"保证出厂合格率100%","img":"http://page-bucket.oiaqye7985.com/img/i/b2_list2.jpg","h1":"完善的检测管理体系","li":["公司总资产2亿元，多名资深的检测人员把控；;","完整的物理和化学性能分析检测并出具相关的检测报告；","保证了热镀锌带管从原料入库到成品出库各个环节安全可靠。"]},{"p":"是众多客户选择兆利达的理由","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list3.jpg","h1":"客户至上”的服务理念和行动","li":["只做精品--不接受不良品、不制造不良品、不放行不良品","是多项国家重点工程定点供应单位和多家大型钢铁公司一级经销商 同澳大利亚、加拿大、南美、中东等国家建立贸易关系，构筑起牢 固的世界性经营格局。;"]}],"banner":["http://page-bucket.oiaqye7985.com/img/i/banner.jpg"],"foot":[{"img":"http://page-bucket.oiaqye7985.com/img/i/foot1.jpg"},{"img":"http://page-bucket.oiaqye7985.com/img/i/foot2.jpg"},{"img":"http://page-bucket.oiaqye7985.com/img/i/foot3.jpg"},{"img":"http://page-bucket.oiaqye7985.com/img/i/foot4.jpg"}],"headtop_txt":{"h1":"热销产品推荐","h2":"我们的优势","h3":"成功案例","h4":"荣誉资质"}},"paramPC":{"steel":["http://page-bucket.oiaqye7985.com/img/i/abt2.jpg"],"product":[{"p":"镀锌带方管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list1.jpg"},{"p":"镀锌带圆管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list2.jpg"},{"p":"镀锌带方管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list3.jpg"},{"p":"钢管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list5.jpg"},{"p":"钢管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list5.jpg"},{"p":"钢管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list6.jpg"}],"iso":["http://page-bucket.oiaqye7985.com/img/i/abt1.jpg"],"successfulCases":[{"p":"大棚施工图","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"},{"p":"石油管道施工图","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"},{"p":"穿线施工图","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"},{"p":"防腐工程","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"},{"p":"钢管喷漆图","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"},{"p":"天然气管道施工图","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"}],"advantage":[{"p":"库存充足、保证货期","img":"http://page-bucket.oiaqye7985.com/img/i/b2_list1.jpg","h1":"强大的生产实力","li":["热镀锌带圆管、方管是主导产品，年产量达45万吨;","直缝焊管、热镀锌管、螺旋焊管等产品年销量达65万吨;","产品广泛应用于水暖、大棚、穿线、石油、天然气等;"]},{"p":"保证出厂合格率100%","img":"http://page-bucket.oiaqye7985.com/img/i/b2_list2.jpg","h1":"完善的检测管理体系","li":["公司总资产2亿元，多名资深的检测人员把控；;","完整的物理和化学性能分析检测并出具相关的检测报告；","保证了热镀锌带管从原料入库到成品出库各个环节安全可靠。"]},{"p":"是众多客户选择兆利达的理由","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list3.jpg","h1":"客户至上”的服务理念和行动","li":["只做精品--不接受不良品、不制造不良品、不放行不良品","是多项国家重点工程定点供应单位和多家大型钢铁公司一级经销商 同澳大利亚、加拿大、南美、中东等国家建立贸易关系，构筑起牢 固的世界性经营格局。;"]}],"banner":["http://page-bucket.oiaqye7985.com/img/i/banner.jpg"],"foot":[{"img":"http://page-bucket.oiaqye7985.com/img/i/foot1.jpg"},{"img":"http://page-bucket.oiaqye7985.com/img/i/foot2.jpg"},{"img":"http://page-bucket.oiaqye7985.com/img/i/foot3.jpg"},{"img":"http://page-bucket.oiaqye7985.com/img/i/foot4.jpg"}],"headtop_txt":{"h1":"热销产品推荐","h2":"我们的优势","h3":"成功案例","h4":"荣誉资质"}},"modelType":0}}'
+var data='{"status":200,"msg":"OK","data":{"Mbanner":["http://page-bucket.oiaqye7985.com/img/i/foot1.jpg"],"paramMob":{"steel":["http://page-bucket.oiaqye7985.com/img/i/abt2.jpg"],"product":[{"p":"镀锌带方管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list1.jpg"},{"p":"镀锌带圆管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list2.jpg"},{"p":"镀锌带方管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list3.jpg"},{"p":"钢管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list5.jpg"},{"p":"钢管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list5.jpg"},{"p":"钢管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list6.jpg"}],"iso":["http://page-bucket.oiaqye7985.com/img/i/abt1.jpg"],"successfulCases":[{"p":"大棚施工图","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"},{"p":"石油管道施工图","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"},{"p":"穿线施工图","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"},{"p":"防腐工程","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"},{"p":"钢管喷漆图","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"},{"p":"天然气管道施工图","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"}],"advantage":[{"p":"库存充足、保证货期","img":"http://page-bucket.oiaqye7985.com/img/i/b2_list1.jpg","h1":"强大的生产实力","li":["热镀锌带圆管、方管是主导产品，年产量达45万吨;","直缝焊管、热镀锌管、螺旋焊管等产品年销量达65万吨;","产品广泛应用于水暖、大棚、穿线、石油、天然气等;"]},{"p":"保证出厂合格率100%","img":"http://page-bucket.oiaqye7985.com/img/i/b2_list2.jpg","h1":"完善的检测管理体系","li":["公司总资产2亿元，多名资深的检测人员把控；;","完整的物理和化学性能分析检测并出具相关的检测报告；","保证了热镀锌带管从原料入库到成品出库各个环节安全可靠。"]},{"p":"是众多客户选择兆利达的理由","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list3.jpg","h1":"客户至上”的服务理念和行动","li":["只做精品--不接受不良品、不制造不良品、不放行不良品","是多项国家重点工程定点供应单位和多家大型钢铁公司一级经销商 同澳大利亚、加拿大、南美、中东等国家建立贸易关系，构筑起牢 固的世界性经营格局。;"]}],"banner":["http://page-bucket.oiaqye7985.com/img/i/banner.jpg"],"foot":[{"img":"http://page-bucket.oiaqye7985.com/img/i/foot1.jpg"},{"img":"http://page-bucket.oiaqye7985.com/img/i/foot2.jpg"},{"img":"http://page-bucket.oiaqye7985.com/img/i/foot3.jpg"},{"img":"http://page-bucket.oiaqye7985.com/img/i/foot4.jpg"}],"headtop_txt":{"h1":"热销产品推荐","h2":"我们的优势","h3":"成功案例","h4":"荣誉资质"}},"paramPC":{"steel":["http://page-bucket.oiaqye7985.com/img/i/abt2.jpg"],"product":[{"p":"镀锌带方管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list1.jpg"},{"p":"镀锌带圆管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list2.jpg"},{"p":"镀锌带方管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list3.jpg"},{"p":"钢管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list5.jpg"},{"p":"钢管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list5.jpg"},{"p":"钢管","img":"http://page-bucket.oiaqye7985.com/img/i/b1_list6.jpg"}],"iso":["http://page-bucket.oiaqye7985.com/img/i/abt1.jpg"],"successfulCases":[{"p":"大棚施工图","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"},{"p":"石油管道施工图","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"},{"p":"穿线施工图","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"},{"p":"防腐工程","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"},{"p":"钢管喷漆图","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"},{"p":"天然气管道施工图","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list1.jpg"}],"advantage":[{"p":"库存充足、保证货期","img":"http://page-bucket.oiaqye7985.com/img/i/b2_list1.jpg","h1":"强大的生产实力","li":["热镀锌带圆管、方管是主导产品，年产量达45万吨;","直缝焊管、热镀锌管、螺旋焊管等产品年销量达65万吨;","产品广泛应用于水暖、大棚、穿线、石油、天然气等;"]},{"p":"保证出厂合格率100%","img":"http://page-bucket.oiaqye7985.com/img/i/b2_list2.jpg","h1":"完善的检测管理体系","li":["公司总资产2亿元，多名资深的检测人员把控；;","完整的物理和化学性能分析检测并出具相关的检测报告；","保证了热镀锌带管从原料入库到成品出库各个环节安全可靠。"]},{"p":"是众多客户选择兆利达的理由","img":"http://page-bucket.oiaqye7985.com/img/i/b3_list3.jpg","h1":"客户至上”的服务理念和行动","li":["只做精品--不接受不良品、不制造不良品、不放行不良品","是多项国家重点工程定点供应单位和多家大型钢铁公司一级经销商 同澳大利亚、加拿大、南美、中东等国家建立贸易关系，构筑起牢 固的世界性经营格局。;"]}],"banner":["http://page-bucket.oiaqye7985.com/img/i/banner.jpg"],"foot":[{"img":"http://page-bucket.oiaqye7985.com/img/i/foot1.jpg"},{"img":"http://page-bucket.oiaqye7985.com/img/i/foot2.jpg"},{"img":"http://page-bucket.oiaqye7985.com/img/i/foot3.jpg"},{"img":"http://page-bucket.oiaqye7985.com/img/i/foot4.jpg"}],"headtop_txt":{"h1":"热销产品推荐","h2":"我们的优势","h3":"成功案例","h4":"荣誉资质"}},"modelType":0}}'
 export default {
 	data () {
 		return{
@@ -313,14 +320,12 @@ export default {
 	},
 	created(){
 		this.data=JSON.parse(this.data).data.paramPC
-		console.log(this.data)
 	},
 	mounted(){
 			InlineEditor.create(this.$refs.txtAll,{
 				language: 'zh-cn',
 				toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ],
 			}).catch( error => {});
-			
 	},
 	updated(){
 	},
@@ -346,14 +351,17 @@ export default {
     		this.dataImg(_this,input_file,maxWidth,
 		    	function(str){
 		    		_this.data.banner.splice(index,1,str)
+		    		console.log(_this.data.banner)
 		    })
     		input_file.value=''
       	},
       	bannerDel(index){
       		this.data.banner.splice(index,1)
+      		this.data.iso.splice(index,1)
 	    },
 	    addbanner(){
 	      	this.data.banner.push("http://page-bucket.oiaqye7985.com/img/i/banner.jpg")
+	      	this.data.iso.push("http://page-bucket.oiaqye7985.com/img/i/abt1.jpg")
 	    },
 	    productFile(input_file,index,maxWidth){
 			var _this=this;
@@ -370,6 +378,14 @@ export default {
 			this.data.product.push({img:"http://page-bucket.oiaqye7985.com/img/i/b1_list1.jpg",p:"镀锌带方管"})
 		},
 		isoFile(input_file,index,maxWidth){
+			var _this=this;
+    		this.dataImg(_this,input_file,maxWidth,
+		    	function(str){
+		    		_this.data.iso.splice(index,1,str)
+		    })
+    		input_file.value=''
+		},
+		MbannerFile(input_file,index,maxWidth){
 			var _this=this;
     		this.dataImg(_this,input_file,maxWidth,
 		    	function(str){

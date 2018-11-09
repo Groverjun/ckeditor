@@ -1,0 +1,147 @@
+{
+	title:"厂家直销",
+	bannerBg:"http://page-bucket.oiaqye7985.com/land-page/images/module15/bannerBg.jpg",
+	banner:"http://page-bucket.oiaqye7985.com/land-page/images/module15/banner.png",
+	bannerH1:"石雕观音",
+	bannerP:"可按客户需求定制 ",
+	bannerList1:"纯手工打造雕像、不变形",
+	bannerList2:"大量库存、保证运输过程",
+	bannerAbt:"咨询雕像问题 >",
+	productH1:"我们能做的产品",
+	productP1:"质保两年",
+	productP2:"批发定制",
+	productAbt:"咨询客服了解更多 >",
+	productList:[
+		{
+			h1:"寺庙佛像",
+			p:"支持混批  一件代发",
+			a:"了解产品 >"
+		},
+		{
+			h1:"石雕栏杆",
+			p:"厂家直销  加工定制",
+			a:"了解产品 >"
+		},
+		{
+			h1:"校园雕塑",
+			p:"厂家直销  支持混批",
+			a:"了解产品 >"
+		},
+		{
+			h1:"牌坊牌楼",
+			p:"厂家直销  一件代发",
+			a:"了解产品 >"
+		},
+		{
+			h1:"文化墙",
+			p:"免费拿样  支持混批",
+			a:"了解产品 >"
+		},
+		{
+			h1:"玻璃钢雕",
+			p:"量大优惠  按需定制",
+			a:"了解产品 >"
+		},
+	],
+	series:[
+		{
+			h1:"石雕系列",
+			p:"10年源头厂家直供，量大优惠",
+			img:"http://page-bucket.oiaqye7985.com/land-page/images/module15/person.jpg",
+			h2:"古代人物石雕",
+			h3:"原地天然取材 工艺精细",
+			h4:"纯手工打造  表面光滑   品质保证",
+			ol:[
+				{
+					p:"低于同行",
+					cla:"iconfont icon-qian"
+				},
+				{
+					p:"专业团队",
+					cla:"iconfont icon-tuandui"
+				},
+				{
+					p:"周期短",
+					cla:"iconfont icon-shijian"
+				}
+			],
+			abt:"马上咨询",
+			ul:[
+				{
+					img:"http://page-bucket.oiaqye7985.com/land-page/images/module15/Elephant.jpg",
+					h1:"石雕大象",
+					p:"2年质保 / 不易破碎 / 耐腐蚀 / 厂家定制",
+					abt:"咨询优惠"
+				},
+				{
+					img:"http://page-bucket.oiaqye7985.com/land-page/images/module15/Elephant.jpg",
+					h1:"石雕大象",
+					p:"2年质保 / 不易破碎 / 耐腐蚀 / 厂家定制",
+					abt:"咨询优惠"
+				}
+			]
+		},
+		{
+			h1:"铜雕系列",
+			p:"现货充足，按需定制，闪电发货",
+			img:"http://page-bucket.oiaqye7985.com/land-page/images/module15/guanyin.jpg",
+			h2:"供应铜雕产物",
+			h3:"原地天然取材 工艺精细",
+			h4:"纯手工打造  表面光滑   品质保证",
+			ol:[
+				{
+					p:"低于同行",
+					cla:"iconfont icon-qian"
+				},
+				{
+					p:"专业团队",
+					cla:"iconfont icon-tuandui"
+				},
+				{
+					p:"周期短",
+					cla:"iconfont icon-shijian"
+				}
+			],
+			abt:"马上咨询",
+			ul:[
+				{
+					img:"http://page-bucket.oiaqye7985.com/land-page/images/module15/list1.jpg",
+					h1:"毛泽东雕像",
+					p:"2年质保 / 不易破碎 / 耐腐蚀 / 厂家定制",
+					abt:"咨询优惠"
+				},
+				{
+					img:"http://page-bucket.oiaqye7985.com/land-page/images/module15/list2.jpg",
+					h1:"金元宝铜元宝铜雕塑",
+					p:"2年质保 / 不易破碎 / 耐腐蚀 / 厂家定制",
+					abt:"咨询优惠"
+				}
+			]
+		}		
+	],
+	advantage1:["9年雕刻经验","降低成本10%","尺寸可大可小","24小时服务","咨询客服  >"],
+	advantage2:["9年雕刻经验","降低成本10%","尺寸可大可小","24小时服务","咨询客服  >"],
+	manufactorH1:"厂家实力",
+	manufactorp:"10年源头厂家直供，量大优惠",
+	manufactorUl:[
+			{
+				img:"http://page-bucket.oiaqye7985.com/land-page/images/module15/flist1.jpg",
+				p:"专业雕刻师在给客户雕刻石栏板"
+			},
+			{
+				img:"http://page-bucket.oiaqye7985.com/land-page/images/module15/flist2.jpg",
+				p:"每一个产品我们都认真对待，雕刻大象"
+			},
+			{
+				img:"http://page-bucket.oiaqye7985.com/land-page/images/module15/flist3.jpg",
+				p:"1000+精彩案例集锦，百家客户的信赖"
+			},
+			{
+				img:"http://page-bucket.oiaqye7985.com/land-page/images/module15/flist4.jpg",
+				p:"木头材质包装，保证产品完好无损，专业人员物流运输"
+			}
+		],
+	background:"#927463",
+	color:"#03256c",
+	colorT:"#fff"
+}

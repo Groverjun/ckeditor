@@ -1,6 +1,6 @@
 # ckeditor
 
-> A Vue.js project
+> [着落页智能制作系统](http://sso.mywayboo.com/sso/sso/tologin.action?main=http://zz.wayboo.net.cn/static/index.html)
 
 ## Build Setup
 
@@ -17,5 +17,4 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
-
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
