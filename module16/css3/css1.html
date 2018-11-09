@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		     .cornerMark{
+		     	width: 400px;
+		     	height: 75px;
+		     	overflow: hidden;
+		     	position: relative;
+		     }
+		     .cornerMark .cornerMark_title{
+		    	width: 200px;
+		    	height: 50px;
+		    	overflow: hidden;
+		    	position: relative;
+		    	float: left; 
+		     }
+		     .cornerMark .cornerMark_title>div{
+		     	width: 170px;
+		     	height: 50px;
+		     	background: #161616;
+		     }
+		     .cornerMark .cornerMark_title>span{
+		     	display: block;
+		     	right: 0;
+		     	top: 0;
+		     	position: absolute;
+		     	border: 26px solid transparent;
+		     	border-top-color: #161616;
+		     	border-left-color: #161616;
+		     	border-top-width: 50px;
+		     }
+		     .cornerMark_titleRight{
+		     	transform: rotateY(180deg) rotateX(180deg);
+		     }
+		     .cornerMark .cornerMark_titleRight>div{background: #ff0036;}
+		     .cornerMark .cornerMark_titleRight>span{border-top-color: #ff0036;border-left-color:#ff0036;}
+		     .cornerMarkI{
+		     	display: inline-block;
+		     	border: 5px solid transparent;
+		     	border-top-color: #b20127;
+		     	border-left-color: #b20127;
+		     	transform: rotatex(-180deg) ;
+		     	position:absolute;
+		     	top: 0px;
+    			right: 0px
+		     }
+		     .cornerMark_titleLeft{
+		     	bottom: -20px;
+		     	left: 23px;
+		     }
+		     .cornerMark_titleRight{
+		     	top: 10px;
+		     }
+		</style>
+	</head>
+	<body>
+		<div class="cornerMark">
+			<div class="cornerMark_title cornerMark_titleLeft">
+				<div></div>
+				<span></span>
+			</div>
+			<div class="cornerMark_title cornerMark_titleRight">
+				<div>5456</div>
+				<span></span>
+			</div>
+			<i class="cornerMarkI"></i>
+		</div>
+	</body>
+</html>

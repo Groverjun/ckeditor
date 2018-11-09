@@ -1,0 +1,28 @@
+@charset "utf-8";
+body{
+	padding: 0;
+	margin: 0;
+}
+.clearfix:after{
+  content: "."; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden;  
+}
+.template16 *{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-style: none;
+	font-weight: normal;
+	box-sizing: border-box;
+	font-style: normal;
+}
+.template16 .row{
+	width: 1200px;
+	margin: auto;
+}
+body{
+	background: url(../img/bg.jpg);
+}

@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JS实现倒计时(时、分，秒)</title>
+    <script src="../layui/layui/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var endTime=getDateAfter_n(getNowFormatDate(), 10, "-")
+        console.log(endTime.split("-"))
+        window.setInterval(function(){ShowCountDown(endTime.split("-")[0],endTime.split("-")[1],endTime.split("-")[2],'countdown');}, 1000);
+		function getDateAfter_n(initDate, days, flag){
+			if(!days){
+				return initDate;
+			}
+			initDate = initDate.replace(/-/g,'');
+			flag = $.trim(flag);
+			var date;
+			// 是否设置了起始日期
+			if(!$.trim(initDate)){ // 没有设置初始化日期，就默认为当前日期
+		        date = new Date();  
+			}else{
+				var year = initDate.substring(0,4);
+				var month = initDate.substring(4,6);
+				var day = initDate.substring(6,8);
+				date = new Date(year, month-1, day); // 月份是从0开始的
+			}
+			date.setDate(date.getDate() + days);
+	 
+			var yearStr = date.getFullYear();
+			var monthStr = ("0"+(date.getMonth()+1)).slice(-2, 8); // 拼接2位数月份
+			var dayStr = ("0"+date.getDate()).slice(-2, 8); // 拼接2位数日期
+			var result = "";
+			if(!flag){
+				result = yearStr+"年"+monthStr+"月"+dayStr+"日";
+			}else{
+				result = yearStr+flag+monthStr+flag+dayStr;
+			}
+			return result;
+		}
+		function getNowFormatDate() {
+		    var date = new Date();
+		    var seperator1 = "-";
+		    var seperator2 = ":";
+		    var month = date.getMonth() + 1;
+		    var strDate = date.getDate();
+		    if (month >= 1 && month <= 9) {
+		        month = "0" + month;
+		    }
+		    if (strDate >= 0 && strDate <= 9) {
+		        strDate = "0" + strDate;
+		    }
+		    var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+		            + " " + date.getHours() + seperator2 + date.getMinutes()
+		            + seperator2 + date.getSeconds();
+		    return currentdate;
+		}
+        function ShowCountDown(year,month,day,divname){
+            var now = new Date();
+            var endDate = new Date(year, month, day);
+            var leftTime=endDate.getTime()-now.getTime();
+            var dd = parseInt(leftTime / 1000 / 60 / 60 / 24, 10);//计算剩余的天数
+            var hh = parseInt(leftTime / 1000 / 60 / 60 % 24, 10);//计算剩余的小时数
+            var mm = parseInt(leftTime / 1000 / 60 % 60, 10);//计算剩余的分钟数
+            var ss = parseInt(leftTime / 1000 % 60, 10);//计算剩余的秒数
+            dd = checkTime(dd);
+            hh = checkTime(hh);
+            mm = checkTime(mm);
+            ss = checkTime(ss);//小于10的话加0
+            var cc = document.getElementById(divname);
+            dd-=30
+            cc.innerHTML = "距离" + year + "年" + month + "月" + day + "日还有：" + dd + "天" + hh + "小时" + mm + "分" + ss + "秒";
+        }
+        function checkTime(i){
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+  </script>
+</head>
+<body>
+<div id="countdown"></div>
+</body>
+</html>
